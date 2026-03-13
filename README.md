@@ -80,7 +80,6 @@ It includes a dashboard showing flood risk, a flood alert notification system, a
 
 Aadarsh Mithilesh Mishra  
 Antra Priyadarshini  
-Antra Priyadarshini  
 Srishti Maurya  
 Vaishnavi Yadav  
 
