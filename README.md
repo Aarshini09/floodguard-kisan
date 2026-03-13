@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="logo.png" width="300"/>
+<img src="logo.pneg" width="300"/>
 
 # 🌊 FloodGuard Kisan
 
@@ -57,7 +57,7 @@ Weather Data → Flood Risk Analysis → Alert Generation → Mobile Notificatio
 
 <div align="center">
 
-<img src="app-ui.png" width="900"/>
+<img src="app-ui.pneg" width="900"/>
 
 </div>
 
