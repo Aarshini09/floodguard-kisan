@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="logo.jpeg" width="300"/>
+<img src="icon-512.png" width="300"/>
 
 # 🌊 FloodGuard Kisan
 
