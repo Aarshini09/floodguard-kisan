@@ -1,0 +1,241 @@
+body{
+margin:0;
+font-family:-apple-system;
+color:white;
+
+background:
+linear-gradient(rgba(15,32,39,0.6), rgba(44,83,100,0.85)),
+url("Farm.jpg");
+
+background-size:cover;
+background-position:center;
+}
+/* APP */
+.app{
+max-width:420px;
+margin:auto;
+padding-bottom:30px;
+position:relative;
+z-index:1;
+}
+
+/* HEADER */
+.header{
+text-align:center;
+font-size:22px;
+font-weight:600;
+padding:15px;
+}
+
+/* MAIN CARD */
+.main-card{
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(20px);
+border-radius:25px;
+padding:20px;
+margin:15px;
+text-align:center;
+
+box-shadow:
+0 8px 30px rgba(0,0,0,0.5),
+inset 0 1px 1px rgba(255,255,255,0.1);
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+padding:15px;
+}
+
+/* CARD BUTTON */
+.card-btn{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+padding:20px;
+border-radius:20px;
+text-align:center;
+font-weight:600;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,0.6),
+inset 0 1px 1px rgba(255,255,255,0.2);
+
+transition:0.3s;
+}
+
+.card-btn:active{
+transform:scale(0.95);
+}
+
+/* PAGE */
+.page{
+display:none;
+padding:20px;
+animation:fadeIn 0.4s ease;
+position:relative;
+z-index:1;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,0.12);
+padding:15px;
+border-radius:18px;
+margin-top:10px;
+
+box-shadow:0 5px 20px rgba(0,0,0,0.5);
+}
+
+/* BUTTON */
+.action-btn{
+padding:12px;
+border:none;
+border-radius:15px;
+background:#00c6ff;
+color:black;
+font-weight:bold;
+margin-top:10px;
+}
+
+/* BACK BUTTON */
+.back-btn{
+position:fixed;
+top:10px;
+left:10px;
+background:rgba(255,255,255,0.2);
+border:none;
+padding:8px;
+border-radius:12px;
+}
+
+/* MAP */
+#map{
+height:300px;
+border-radius:20px;
+margin-top:10px;
+}
+
+/* SPLASH */
+#splash{
+position:fixed;
+width:100%;
+height:100%;
+background:#1c1c1e;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+animation:fadeOut 2s forwards;
+z-index:10;
+}
+
+@keyframes fadeOut{
+100%{opacity:0;visibility:hidden;}
+}
+.scheme-card{
+background:rgba(0,0,0,0.5);
+border-radius:16px;
+padding:15px;
+color:white;
+text-align:center;
+}
+
+.scheme-img{
+width:60px;
+margin-bottom:10px;
+}
+
+.scheme-card a{
+color:#00ffcc;
+font-weight:bold;
+text-decoration:none;
+}
+#schemesList{
+display:grid;
+grid-template-columns: repeat(2,1fr);
+gap:15px;
+}
+
+#schemesList .card{
+text-align:center;
+padding:15px;
+border-radius:15px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+#schemesList img{
+width:50px;
+margin-bottom:10px;
+}
+
+#schemesList a{
+display:inline-block;
+margin-top:8px;
+padding:5px 12px;
+border-radius:10px;
+background:#00ffcc;
+color:black;
+font-weight:bold;
+text-decoration:none;
+}
+#scanResult .card{
+text-align:left;
+line-height:1.5;
+}
+
+#scanResult h3{
+margin:10px 0 5px;
+color:#00ffcc;
+}
+
+#scanResult p{
+margin:4px 0;
+}
+/* PAGE ANIMATION */
+.page{
+opacity:0;
+transform:translateY(20px);
+transition:0.4s;
+}
+.page.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* CARD ANIMATION */
+.card{
+transition:0.3s;
+}
+.card:hover{
+transform:scale(1.05);
+}
+
+/* BUBBLES BACKGROUND */
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:radial-gradient(circle,#00ffcc22 1px,transparent 1px);
+background-size:40px 40px;
+animation:moveBg 20s linear infinite;
+z-index:-1;
+}
+@keyframes moveBg{
+0%{transform:translate(0,0);}
+100%{transform:translate(-200px,-200px);}
+}
+
+/* BUTTON PRESS */
+button:active{
+transform:scale(0.95);
+}

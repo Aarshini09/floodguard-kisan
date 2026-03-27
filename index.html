@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FloodGuard Kisan</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0f2027">
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+<!-- SPLASH -->
+<div id="splash">
+  <div class="logo">🌊 FloodGuard</div>
+</div>
+
+<div class="app">
+
+<div class="header">FloodGuard Kisan</div>
+
+<div class="main-card">
+<p id="weatherText">Loading weather...</p>
+<p id="risk">🟢 Safe</p>
+</div>
+
+<div class="grid">
+
+<div class="card-btn" onclick="openPage('alertsPage')">⚠ Alerts</div>
+<div class="card-btn" onclick="openPage('mapPage')">🗺 Map</div>
+<div class="card-btn" onclick="openPage('voicePage')">🎤 Voice</div>
+<div class="card-btn" onclick="openPage('scanPage')">📷 Scan</div>
+<div class="card-btn" onclick="openPage('schemesPage')">🏛 Schemes</div>
+<div class="card-btn" onclick="openPage('tipsPage')">🌱 Tips</div>
+
+</div>
+
+</div>
+
+<!-- PAGES -->
+
+<div id="alertsPage" class="page">
+<button class="back-btn" onclick="goHome()">←</button>
+<h2>Alerts</h2>
+<div id="alertBox"></div>
+</div>
+
+<div id="mapPage" class="page">
+<button class="back-btn" onclick="goHome()">←</button>
+<h2>Flood Map</h2>
+<p class="legend">🔴 High | 🟠 Medium | 🟢 Safe</p>
+<div id="map"></div>
+</div>
+
+<div id="voicePage" class="page">
+<button class="back-btn" onclick="goHome()">←</button>
+
+<select id="language">
+<option value="en">English</option>
+<option value="hi">Hindi</option>
+<option value="awadhi">Awadhi</option>
+<option value="bhojpuri">Bhojpuri</option>
+</select>
+
+<button class="action-btn" onclick="speakAlert()">Speak</button>
+</div>
+
+<div id="scanPage" class="page">
+<button class="back-btn" onclick="goHome()">←</button>
+
+<input type="file" id="imageInput">
+<button class="action-btn" onclick="realScan()">Scan</button>
+
+<div id="scanResult"></div>
+</div>
+
+<div id="schemesPage" class="page">
+<button class="back-btn" onclick="goHome()">←</button>
+<h2>Schemes</h2>
+<div id="schemesList"></div>
+</div>
+
+<div id="tipsPage" class="page">
+<button class="back-btn" onclick="goHome()">←</button>
+<h2>Tips</h2>
+<div id="tipsBox"></div>
+</div>
+
+<button id="installBtn">Install</button>
+
+<script src="script.js"></script>
+</body>
+</html>
